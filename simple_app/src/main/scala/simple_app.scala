@@ -3,14 +3,15 @@
      Calculate "a", "b" in the file
 
 */
+
 import org.apache.spark.SparkContext
 import org.apache.spark.SparkContext._
 import org.apache.spark.SparkConf
-
+/*
 object SimpleApp {
     def main(args: Array[String]) 
     {
-        val logFile = "YOUR_SPARK_HOME/README.md"
+        val logFile = "/usr/local/spark/README.md"
         val conf = new SparkConf().setAppName("Simple Application")
         val sc = new SparkContext(conf)
         val logData = sc.textFile(logFile, 2).cache()
@@ -18,4 +19,13 @@ object SimpleApp {
         val numBs = logData.filter(line => line.contains("b")).count()
         println("Lines with a: %s, Lines with b: %s".format(numAs, numBs))
     }
+}
+*/
+
+object Hello extends Greeting with App {
+  println(greeting)
+}
+
+trait Greeting {
+  lazy val greeting: String = "hello"
 }
