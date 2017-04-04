@@ -5,3 +5,5 @@ node_modules
 .cache-main
 .cache-tests
 **/bin/
+**/metastore_db/
+*.log
